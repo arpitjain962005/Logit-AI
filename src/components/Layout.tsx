@@ -9,7 +9,7 @@ export function Layout() {
   const [collapsed, setCollapsed] = useState(true);
 
   return (
-    <div className="min-h-screen flex bg-[#0B1220] text-slate-200 font-sans selection:bg-blue-500/30">
+    <div className="min-h-screen flex bg-[#12100E] text-slate-200 font-sans selection:bg-blue-500/30">
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
       
       <motion.div

@@ -1,13 +1,13 @@
 import {
-  LayoutDashboard,
-  Package,
-  BrainCircuit,
-  Truck,
-  Warehouse,
-  PlusCircle,
-  MinusCircle,
-  Target,
-  FileText,
+  BookOpen,
+  Briefcase,
+  Ear,
+  Users,
+  Home,
+  TrendingUp,
+  TrendingDown,
+  Crosshair,
+  ScrollText,
   Settings,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
@@ -15,38 +15,38 @@ import { cn } from "../utils";
 import { motion } from "motion/react";
 
 const navItems = [
-  { name: "Dashboard", path: "/", icon: LayoutDashboard },
-  { name: "Shipments", path: "/shipments", icon: Package },
-  { name: "Demand Intelligence", path: "/demand", icon: BrainCircuit },
-  { name: "Transporters", path: "/transporters", icon: Truck },
-  { name: "Warehouses", path: "/warehouses", icon: Warehouse },
-  { name: "Plus", path: "/plus", icon: PlusCircle },
-  { name: "Minus", path: "/minus", icon: MinusCircle },
-  { name: "Targets", path: "/targets", icon: Target },
-  { name: "Reports", path: "/reports", icon: FileText },
-  { name: "Settings", path: "/settings", icon: Settings },
+  { name: "The Ledger", path: "/", icon: BookOpen },
+  { name: "Consignments", path: "/shipments", icon: Briefcase },
+  { name: "The Word", path: "/demand", icon: Ear },
+  { name: "Runners", path: "/transporters", icon: Users },
+  { name: "Storehouses", path: "/warehouses", icon: Home },
+  { name: "The Takings", path: "/plus", icon: TrendingUp },
+  { name: "The Losses", path: "/minus", icon: TrendingDown },
+  { name: "Ambitions", path: "/targets", icon: Crosshair },
+  { name: "The Books", path: "/reports", icon: ScrollText },
+  { name: "Operations", path: "/settings", icon: Settings },
 ];
 
 export function Sidebar({ collapsed, setCollapsed }: { collapsed: boolean; setCollapsed: (v: boolean) => void }) {
   return (
     <motion.aside
       animate={{ width: collapsed ? 80 : 260 }}
-      className="fixed left-0 top-0 bottom-0 z-40 flex flex-col bg-[#111827]/80 backdrop-blur-xl border-r border-white/5"
+      className="fixed left-0 top-0 bottom-0 z-40 flex flex-col bg-[#1C1918]/90 backdrop-blur-xl border-r border-white/5"
       onMouseEnter={() => setCollapsed(false)}
       onMouseLeave={() => setCollapsed(true)}
     >
       <div className="flex items-center h-16 px-6 border-b border-white/5">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded bg-blue-500 flex items-center justify-center font-bold text-white shrink-0">
-            L
+          <div className="w-8 h-8 rounded bg-blue-500 flex items-center justify-center font-serif font-bold text-white shrink-0 shadow-[0_0_10px_rgba(184,151,104,0.3)]">
+            S
           </div>
           {!collapsed && (
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-lg font-semibold tracking-wide text-white"
+              className="text-lg font-serif font-semibold tracking-wide text-white"
             >
-              LOGIT
+              SHELBY CO.
             </motion.span>
           )}
         </div>

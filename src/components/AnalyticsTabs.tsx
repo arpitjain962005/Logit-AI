@@ -3,24 +3,24 @@ import { motion, AnimatePresence } from "motion/react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
 import { cn } from "../utils";
 
-const tabs = ["Transporters", "Routes", "Regions"];
+const tabs = ["Runners", "Routes", "Territories"];
 
 const dataTransporters = [
-  { name: "Transporter A", value: 94, fill: "#3B82F6" },
-  { name: "Transporter B", value: 86, fill: "#F59E0B" },
-  { name: "Transporter C", value: 91, fill: "#14B8A6" },
+  { name: "Arthur", value: 94, fill: "#B89768" },
+  { name: "John", value: 86, fill: "#DAA520" },
+  { name: "Finn", value: 91, fill: "#8B7355" },
 ];
 
 const dataRoutes = [
-  { name: "Road", value: 12.1, fill: "#FACC15" },
-  { name: "Rail", value: 14.4, fill: "#FACC15" },
-  { name: "Hybrid", value: 13.2, fill: "#FACC15" },
+  { name: "Canal", value: 12.1, fill: "#D4AF37" },
+  { name: "Rail", value: 14.4, fill: "#D4AF37" },
+  { name: "Road", value: 13.2, fill: "#D4AF37" },
 ];
 
 const dataRegions = [
-  { name: "North", value: 18, fill: "#22C55E" },
-  { name: "East", value: 9, fill: "#22C55E" },
-  { name: "South", value: 4, fill: "#22C55E" },
+  { name: "Birmingham", value: 18, fill: "#6B8E23" },
+  { name: "London", value: 9, fill: "#6B8E23" },
+  { name: "Liverpool", value: 4, fill: "#6B8E23" },
 ];
 
 export function AnalyticsTabs() {
@@ -28,24 +28,24 @@ export function AnalyticsTabs() {
 
   const getData = () => {
     switch (activeTab) {
-      case "Transporters": return dataTransporters;
+      case "Runners": return dataTransporters;
       case "Routes": return dataRoutes;
-      case "Regions": return dataRegions;
+      case "Territories": return dataRegions;
       default: return dataTransporters;
     }
   };
 
   const getFormat = (val: number) => {
-    if (activeTab === "Transporters") return `${val}%`;
+    if (activeTab === "Runners") return `${val}%`;
     if (activeTab === "Routes") return `${val}%`;
-    if (activeTab === "Regions") return `+${val}%`;
+    if (activeTab === "Territories") return `+${val}%`;
     return val;
   };
 
   return (
-    <div className="bg-[#111827]/80 backdrop-blur-md border border-white/5 rounded-2xl p-6 h-[400px] flex flex-col">
+    <div className="bg-[#1C1918]/90 backdrop-blur-md border border-white/5 rounded-2xl p-6 h-[400px] flex flex-col">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-white tracking-wide">Performance Analytics</h3>
+        <h3 className="text-lg font-serif font-semibold text-white tracking-wide">The Books</h3>
         <div className="flex bg-black/20 p-1 rounded-lg border border-white/5">
           {tabs.map((tab) => (
             <button
@@ -86,7 +86,7 @@ export function AnalyticsTabs() {
                 <YAxis stroke="#94A3B8" fontSize={12} tickLine={false} axisLine={false} tickFormatter={getFormat} />
                 <Tooltip
                   cursor={{ fill: 'rgba(255,255,255,0.02)' }}
-                  contentStyle={{ backgroundColor: '#111827', borderColor: 'rgba(255,255,255,0.1)', borderRadius: '8px', color: '#fff' }}
+                  contentStyle={{ backgroundColor: '#1C1918', borderColor: 'rgba(255,255,255,0.1)', borderRadius: '8px', color: '#fff', fontFamily: 'Playfair Display' }}
                   itemStyle={{ color: '#fff' }}
                   formatter={(value: number) => [getFormat(value), 'Value']}
                 />

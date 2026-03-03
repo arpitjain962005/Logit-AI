@@ -1,28 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-bg-base: #0B1220;
-  --color-panel: #111827;
-  --color-primary: #3B82F6;
-  --color-secondary: #14B8A6;
-  --color-revenue: #FACC15;
-  --color-positive: #22C55E;
-  --color-warning: #F59E0B;
-  --color-negative: #EF4444;
-  --color-text-primary: #F8FAFC;
-  --color-text-secondary: #94A3B8;
+  --color-blue-400: #B89768;
+  --color-blue-500: #9A7B54;
+  --color-blue-600: #7A6040;
+  
+  --color-yellow-400: #D4AF37;
+  --color-yellow-500: #B8860B;
+  
+  --color-green-400: #6B8E23;
+  --color-green-500: #556B2F;
+  
+  --color-amber-400: #DAA520;
+  --color-amber-500: #B8860B;
+  
+  --color-red-400: #A52A2A;
+  --color-red-500: #8B0000;
+  
+  --color-teal-400: #8B7355;
+  --color-teal-500: #6E5C44;
+  
+  --color-slate-200: #E0D8C8;
+  --color-slate-300: #C2BBAA;
+  --color-slate-400: #8C8273;
+  --color-slate-500: #6B6358;
+  --color-slate-600: #4A453D;
+  --color-slate-700: #332F2A;
+  --color-slate-800: #24211D;
+  --color-slate-900: #1A1815;
 }
 
 body {
-  background-color: var(--color-bg-base);
-  color: var(--color-text-primary);
+  background-color: #12100E;
+  color: var(--color-slate-200);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.02em;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

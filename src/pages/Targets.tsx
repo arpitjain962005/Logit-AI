@@ -4,10 +4,10 @@ import { Target } from "lucide-react";
 import { cn } from "../utils";
 
 const targets = [
-  { title: "Margin Target", target: "15%", current: "13.2%", progress: 88, color: "blue" },
-  { title: "Quarterly Revenue", target: "$12M", current: "$10.4M", progress: 86, color: "yellow", isRevenue: true },
-  { title: "On-Time Delivery", target: "95%", current: "92.4%", progress: 97, color: "green" },
-  { title: "Forecast Accuracy", target: "90%", current: "84%", progress: 93, color: "teal" },
+  { title: "Our Cut", target: "15%", current: "13.2%", progress: 88, color: "blue" },
+  { title: "Quarterly Takings", target: "£12M", current: "£10.4M", progress: 86, color: "yellow", isRevenue: true },
+  { title: "Successful Runs", target: "95%", current: "92.4%", progress: 97, color: "green" },
+  { title: "Network Control", target: "90%", current: "84%", progress: 93, color: "teal" },
 ];
 
 export function Targets() {
@@ -15,13 +15,13 @@ export function Targets() {
     <PageTransition>
       <div className="max-w-7xl mx-auto pb-20">
         <div className="mb-8">
-          <h1 className="text-2xl font-semibold text-white tracking-tight flex items-center gap-3">
+          <h1 className="text-2xl font-serif font-semibold text-white tracking-tight flex items-center gap-3">
             <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400">
               <Target className="w-6 h-6" />
             </div>
-            Operational Targets
+            Our Ambitions
           </h1>
-          <p className="text-slate-400 mt-2">Track progress against key performance indicators.</p>
+          <p className="text-slate-400 mt-2 font-serif italic">Track progress against key performance indicators.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -31,11 +31,11 @@ export function Targets() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="p-6 rounded-2xl bg-[#111827]/80 backdrop-blur-md border border-white/5 hover:border-white/10 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
+              className="p-6 rounded-2xl bg-[#1C1918]/90 backdrop-blur-md border border-white/5 hover:border-white/10 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
             >
               <div className="flex justify-between items-end mb-6">
                 <div>
-                  <h3 className="text-sm font-medium text-slate-400 mb-2">{item.title}</h3>
+                  <h3 className="text-sm font-serif font-medium text-slate-400 mb-2">{item.title}</h3>
                   <div className="flex items-baseline gap-3">
                     <span className={cn(
                       "text-3xl font-semibold",

@@ -3,16 +3,16 @@ import { MapPin, Truck } from "lucide-react";
 
 export function MapWidget() {
   return (
-    <div className="relative w-full h-[400px] bg-[#111827]/80 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden group">
-      <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/map/1200/600')] bg-cover bg-center opacity-20 mix-blend-luminosity grayscale" />
+    <div className="relative w-full h-[400px] bg-[#1C1918]/90 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden group">
+      <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/vintagemap/1200/600?grayscale')] bg-cover bg-center opacity-30 mix-blend-luminosity sepia-[.8]" />
       
       {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#12100E] via-transparent to-transparent" />
 
       {/* Title */}
       <div className="absolute top-6 left-6 z-20">
-        <h3 className="text-lg font-semibold text-white tracking-wide">Live Logistics Movement</h3>
-        <p className="text-sm text-slate-400 mt-1">Real-time tracking & risk assessment</p>
+        <h3 className="text-lg font-serif font-semibold text-white tracking-wide">The Territory</h3>
+        <p className="text-sm text-slate-400 mt-1">Live Smuggling Routes</p>
       </div>
 
       {/* Animated Routes & Trucks */}
@@ -55,28 +55,28 @@ export function MapWidget() {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileHover={{ opacity: 1, scale: 1 }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 p-4 bg-[#111827]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl cursor-pointer"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 p-4 bg-[#1C1918]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl cursor-pointer font-serif"
       >
         <div className="flex items-center gap-3 mb-3">
           <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
             <Truck className="w-5 h-5" />
           </div>
           <div>
-            <div className="text-sm font-medium text-white">Shipment ID: LG-2847</div>
-            <div className="text-xs text-slate-400">En route to Chicago Hub</div>
+            <div className="text-sm font-medium text-white">Consignment: SH-2847</div>
+            <div className="text-xs text-slate-400">En route to London Garrison</div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div>
-            <div className="text-slate-500 text-xs mb-1">Revenue</div>
-            <div className="text-yellow-400 font-semibold">$42,000</div>
+            <div className="text-slate-500 text-xs mb-1">Takings</div>
+            <div className="text-yellow-400 font-semibold">£42,000</div>
           </div>
           <div>
-            <div className="text-slate-500 text-xs mb-1">Margin</div>
+            <div className="text-slate-500 text-xs mb-1">Our Cut</div>
             <div className="text-green-400 font-semibold">12.4%</div>
           </div>
           <div className="col-span-2">
-            <div className="text-slate-500 text-xs mb-1">Risk Level</div>
+            <div className="text-slate-500 text-xs mb-1">Heat Level</div>
             <div className="text-amber-400 font-medium flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
               Medium

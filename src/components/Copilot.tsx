@@ -25,12 +25,12 @@ export function Copilot() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-6 right-6 w-96 h-[500px] bg-[#111827]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden"
+            className="fixed bottom-6 right-6 w-96 h-[500px] bg-[#1C1918]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden"
           >
             <div className="flex items-center justify-between p-4 border-b border-white/5 bg-white/5">
-              <div className="flex items-center gap-2 text-white font-medium">
+              <div className="flex items-center gap-2 text-white font-serif font-medium">
                 <Sparkles className="w-5 h-5 text-blue-400" />
-                What's on your mind?
+                The Informant
               </div>
               <button
                 onClick={() => setIsOpen(false)}
@@ -40,30 +40,30 @@ export function Copilot() {
               </button>
             </div>
 
-            <div className="flex-1 p-4 overflow-y-auto space-y-4 no-scrollbar">
+            <div className="flex-1 p-4 overflow-y-auto space-y-4 no-scrollbar font-serif">
               <div className="flex flex-col gap-1 items-start">
                 <div className="bg-white/5 text-slate-200 p-3 rounded-2xl rounded-tl-sm text-sm border border-white/5">
-                  3 shipments are at high delay risk. Estimated revenue exposure: <span className="text-yellow-400 font-medium">$42,000</span>.
+                  3 consignments are at risk of interception by the Lee boys. Estimated exposure: <span className="text-yellow-400 font-medium">£42,000</span>.
                 </div>
               </div>
               <div className="flex flex-col gap-1 items-start">
                 <div className="bg-white/5 text-slate-200 p-3 rounded-2xl rounded-tl-sm text-sm border border-white/5">
-                  Switch Route B to rail to increase profitability by <span className="text-green-400 font-medium">2.1%</span>.
+                  Reroute the canal boats to the rail network. The coppers are watching. Increases our cut by <span className="text-green-400 font-medium">2.1%</span>.
                 </div>
               </div>
               <div className="flex flex-col gap-1 items-start">
                 <div className="bg-white/5 text-slate-200 p-3 rounded-2xl rounded-tl-sm text-sm border border-white/5">
-                  Demand in Urban School Zone expected to increase <span className="text-blue-400 font-medium">18%</span> next 10 days.
+                  Demand for the 'special cargo' in London is up <span className="text-blue-400 font-medium">18%</span> this week. Sabini is losing his grip.
                 </div>
               </div>
             </div>
 
             <div className="p-4 border-t border-white/5 space-y-3">
               <div className="flex flex-wrap gap-2">
-                {["Show Margin Risk", "Forecast Demand", "Compare Transporters", "Generate Dispatch Plan"].map((chip) => (
+                {["Show Interception Risk", "Forecast Demand", "Compare Runners", "Plan the Route"].map((chip) => (
                   <button
                     key={chip}
-                    className="text-xs px-3 py-1.5 rounded-full bg-white/5 text-slate-300 hover:bg-blue-500/20 hover:text-blue-400 border border-white/5 transition-colors"
+                    className="text-xs font-serif px-3 py-1.5 rounded-full bg-white/5 text-slate-300 hover:bg-blue-500/20 hover:text-blue-400 border border-white/5 transition-colors"
                   >
                     {chip}
                   </button>
@@ -74,8 +74,8 @@ export function Copilot() {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask Copilot..."
-                  className="w-full bg-black/20 border border-white/10 rounded-xl py-3 pl-4 pr-12 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
+                  placeholder="Ask the informant..."
+                  className="w-full bg-black/20 border border-white/10 rounded-xl py-3 pl-4 pr-12 text-sm font-serif italic text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                 />
                 <button className="absolute right-2 p-2 text-blue-400 hover:text-blue-300 transition-colors">
                   <Send className="w-4 h-4" />

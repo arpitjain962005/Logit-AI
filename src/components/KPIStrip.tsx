@@ -5,7 +5,7 @@ import { cn } from "../utils";
 
 const kpis = [
   {
-    title: "Active Shipments",
+    title: "Active Consignments",
     value: 128,
     icon: Package,
     trend: "+12%",
@@ -14,9 +14,9 @@ const kpis = [
     color: "blue",
   },
   {
-    title: "Revenue in Transit",
+    title: "Pounds in Transit",
     value: 4820000,
-    prefix: "$",
+    prefix: "£",
     icon: DollarSign,
     trend: "+4.2%",
     isPositive: true,
@@ -25,9 +25,9 @@ const kpis = [
     highlight: true,
   },
   {
-    title: "Margin at Risk",
+    title: "Takings at Risk",
     value: 186400,
-    prefix: "$",
+    prefix: "£",
     icon: AlertCircle,
     trend: "-1.1%",
     isPositive: false,
@@ -35,7 +35,7 @@ const kpis = [
     color: "amber",
   },
   {
-    title: "On-Time Delivery",
+    title: "Successful Runs",
     value: 92.4,
     suffix: "%",
     icon: Activity,
@@ -45,7 +45,7 @@ const kpis = [
     color: "green",
   },
   {
-    title: "AI Operational Score",
+    title: "Network Control",
     value: 84,
     suffix: " / 100",
     icon: BrainCircuit,
@@ -67,16 +67,16 @@ export function KPIStrip() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1, duration: 0.5 }}
           className={cn(
-            "relative p-5 rounded-2xl bg-[#111827]/80 backdrop-blur-md border border-white/5 hover:border-white/10 transition-all duration-300 group overflow-hidden",
-            kpi.highlight && "border-yellow-500/20 hover:border-yellow-500/40 shadow-[0_0_15px_rgba(250,204,21,0.05)]",
-            kpi.color === "amber" && "hover:shadow-[0_0_15px_rgba(245,158,11,0.1)]"
+            "relative p-5 rounded-2xl bg-[#1C1918]/90 backdrop-blur-md border border-white/5 hover:border-white/10 transition-all duration-300 group overflow-hidden",
+            kpi.highlight && "border-yellow-500/20 hover:border-yellow-500/40 shadow-[0_0_15px_rgba(212,175,55,0.05)]",
+            kpi.color === "amber" && "hover:shadow-[0_0_15px_rgba(218,165,32,0.1)]"
           )}
         >
           {/* Subtle background glow on hover */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           <div className="flex justify-between items-start mb-4 relative z-10">
-            <span className="text-sm font-medium text-slate-400">{kpi.title}</span>
+            <span className="text-sm font-serif font-medium text-slate-400">{kpi.title}</span>
             <div className={cn(
               "p-2 rounded-lg bg-white/5",
               kpi.color === "blue" && "text-blue-400",
